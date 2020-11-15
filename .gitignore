@@ -1,0 +1,6 @@
+# IDE :
+# -----
+# - [Intellij]
+.idea/
+*.iml
+
