@@ -1,5 +1,14 @@
 
 def bubble_sort(array):
+    array_size = len(array)
+    for i in range(array_size):
+        for j in range(i+1, array_size):
+            if array[i] > array[j]:
+                array[i], array[j] = array[j], array[i]
+    return array
+
+
+def bubble_sort_naive_implementation(array):
     while not array_is_ordered(array):
         bubble_first_value(array)
 
