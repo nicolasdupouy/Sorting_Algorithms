@@ -8,7 +8,9 @@ def bubble_sort(array):
     return array
 
 
-def bubble_sort_naive_implementation(array):
+# The tests shows that this "naive" implementation is 2 times faster that the other one
+# (at least with smalls arrays)
+def bubble_sort_not_so_naive_implementation(array):
     while not array_is_ordered(array):
         bubble_first_value(array)
 
