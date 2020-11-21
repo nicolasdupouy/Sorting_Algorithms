@@ -1,6 +1,5 @@
 import unittest
-
-from BubbleSort import *
+from src.BubbleSort import *
 
 
 class BubbleSortTestCase(unittest.TestCase):
@@ -16,10 +15,6 @@ class BubbleSortTestCase(unittest.TestCase):
 
         self.assertEqual(array_expected, bubble_sort(array))
         self.assertEqual(array_expected, bubble_sort_not_so_naive_implementation(array))
-
-    def test_bubble_sort_timeit(self):
-        bubble_sort_one_million_calls([-4, 6, 3, 0, -33, 5, 1])
-        bubble_sort_not_so_naive_implementation_one_million_calls([-4, 6, 3, 0, -33, 5, 1])
 
 
 if __name__ == '__main__':

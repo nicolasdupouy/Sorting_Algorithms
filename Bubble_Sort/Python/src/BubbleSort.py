@@ -1,28 +1,3 @@
-import functools
-
-
-def time_with_one_million_calls(func):
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        import timeit
-        start_time = timeit.default_timer()
-        for t in range(1000000):
-            func(*args, **kwargs)
-        elapsed_time = timeit.default_timer() - start_time
-        print(f'function [{func.__name__}] finished in {int(elapsed_time * 1000)} ms (launched 1 million times)')
-    return wrapper
-
-
-@time_with_one_million_calls
-def bubble_sort_one_million_calls(array):
-    return bubble_sort(array)
-
-
-@time_with_one_million_calls
-def bubble_sort_not_so_naive_implementation_one_million_calls(array):
-    return bubble_sort_not_so_naive_implementation(array)
-
-
 def bubble_sort(array):
     array_size = len(array)
     for i in range(array_size):
